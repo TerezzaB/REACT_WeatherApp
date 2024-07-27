@@ -10,4 +10,21 @@
   text-align: center;
 }
 
-._nav { border-bottom: 1px solid #c7f7f7; z-index: 1000; }
+._nav { border-bottom: 2px solid #FFF; z-index: 1000; }
+
+@layer components {
+  .typing-effect {
+    @apply inline-block;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFF; }
+  }
+}
