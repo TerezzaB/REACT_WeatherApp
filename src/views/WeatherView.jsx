@@ -9,7 +9,6 @@ export default function WeatherView() {
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null);
 
-
     const fetchWeather = async (city) => {
         try {
             const API_KEY = '6bfb79595889816b6fd544550f1e529b';
@@ -20,6 +19,7 @@ export default function WeatherView() {
                     units: 'metric'
                 }
             });
+            console.log(response);
             setWeather(response.data);
             setError(null);
         }
